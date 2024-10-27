@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Responsive</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .boxes{
+            min-width: 100vw;
+            max-height: 100vh;
+            display: grid;
+            grid-template-rows: 350px 270px 350px 350px;
+            grid-template-columns: 300px 300px 380px 350px;
+            background-color: rgb(233, 222, 222);
+            overflow: scroll;
+            /* align-items: center; */
+            justify-content: center;
+            /* display: flex; */
+            .writeup p{
+                text-align: center;
+            }
+
+        }
+        .box{
+            margin:10px;
+            border-radius: 20px;
+            /* border: 5px solid black; */
+            box-shadow: inset;
+            padding: 15px;
+        }
+        .box1{
+            grid-area: 1/1/2/3;
+            background-color: rgb(60, 60, 129);
+
+        }
+        .box2{
+            grid-area: 1/3/2/4;
+            background-color: rgb(196, 107, 122);
+            
+        }
+        .box3{
+            grid-area: 1/4/3/5;
+            background-color: rgb(78, 195, 230);
+        }
+        .box4{
+            grid-area: 2/1/3/2;
+            background-color: rgb(144, 85, 199);
+        }
+        .box5{
+            grid-area: 2/2/3/4;
+            background-color: rgb(70, 158, 70);
+
+        }
+        .about{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        }
+        .about img{
+            width: 80px;
+            height: 80px;
+            margin-right: 50px;
+            border-radius: 50%;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        h1{
+            font-size: medium;
+            margin-bottom: 5px;
+        }
+        .about p{
+            color: beige;
+            margin-top: 0;
+        }
+        .writeup{
+            display: grid;
+            place-items: center;
+
+        }
+        .writeup h3{
+            margin: 5px;
+        }
+        .writeup p{
+            text-align: center;
+            max-width: fit-content;
+        }
+        @media (max-width: 800px) {
+            .boxes{
+            /* grid-template-rows: 200px 200px 200px 200px 200px;  */
+            grid-template-columns: 1fr;
+            overflow: scroll;
+            grid-column: auto;
+            margin-right: 30px;
+            }
+            .box{
+            margin:10px;
+            border-radius: 10px;
+            margin-right: auto;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+
+            } 
+            .box1{
+            grid-area: 1/1/2/3;
+            }
+            .box2{
+            grid-area: 2/1/3/3;
+            }
+            .box3{
+            grid-area: 3/1/4/3;
+            }
+            .box4{
+            grid-area: 4/1/5/3;
+            }
+            .box5{
+            grid-area: 5/1/6/3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box box1">
+            <div class="about">
+                <img src="person1.jpeg">
+                <div>
+                <h1>Harry</h1>
+                <p>Verified Graduate</p>
+                </div>
+            </div>
+            
+            <div class="writeup">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolores possimus nisi quidem similique iure nostrum accusamus maiores provident aliquid!</p>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="about">
+                <img src="person2.jpeg">
+                <div>
+                    <h1>Joe</h1>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="writeup">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolores possimus nisi quidem similique iure nostrum accusamus maiores provident aliquid!</p>
+            </div>
+        </div>
+        <div class="box box3">
+            <div class="about">
+                <img src="person3.jpeg"><br>
+                <div>
+                    <h1>Hafeeza</h1>
+                <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="writeup">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolores possimus nisi quidem similique iure nostrum accusamus maiores provident aliquid!</p>
+            </div>
+        </div>
+        <div class="box box4">
+            <div class="about">
+                <img src="person4.jpeg"><br>
+                <div>
+                    <h1>Ram</h1>
+                <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="writeup">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolores possimus nisi quidem similique iure nostrum accusamus maiores provident aliquid!</p>
+            </div>
+        </div>
+        <div class="box box5">
+            <div class="about">
+                <img src="person5.jpeg"><br>
+                <div>
+                    <h1>Andrew</h1>
+                <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="writeup">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolores possimus nisi quidem similique iure nostrum accusamus maiores provident aliquid!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
